@@ -1,0 +1,81 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitor de Qualidade do Ar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Monitor de Qualidade do Ar</h1>
+
+    <label for="city">Escolha a cidade:</label>
+    <select id="city">
+      <option value="">Selecione uma Capital Brasileira</option>
+      <option value="aracaju">Aracaju</option>
+      <option value="belem">Belém</option>
+      <option value="beloHorizonte">Belo Horizonte</option>
+      <option value="brasilia">Brasília</option>
+      <option value="campoGrande">Campo Grande</option>
+      <option value="curitiba">Curitiba</option>
+      <option value="cuiaba">Cuiabá</option>
+      <option value="florianopolis">Florianópolis</option>
+      <option value="fortaleza">Fortaleza</option>
+      <option value="goiania">Goiânia</option>
+      <option value="joaoPessoa">João Pessoa</option>
+      <option value="maceio">Maceió</option>
+      <option value="manaus">Manaus</option>
+      <option value="natal">Natal</option>
+      <option value="palmas">Palmas</option>
+      <option value="portoAlegre">Porto Alegre</option>
+      <option value="portoVelho">Porto Velho</option>
+      <option value="recife">Recife</option>
+      <option value="riodejaneiro">Rio de Janeiro</option>
+      <option value="rioBranco">Rio Branco</option>
+      <option value="salvador">Salvador</option>
+      <option value="saoLuis">São Luís</option>
+      <option value="saopaulo">São Paulo</option>
+      <option value="teresina">Teresina</option>
+      <option value="vitoria">Vitória</option>
+    </select>
+
+    <button id="checkAirQuality">Verificar Qualidade do Ar</button>
+
+    <div id="result">
+      <h3>Qualidade do Ar:</h3>
+      <p id="airQuality">Selecione uma cidade e clique em verificar.</p>
+    </div>
+
+    <div id="suggestion">
+      <h3>Baseado na qualidade do ar, sugerimos:</h3>
+      <p id="activity">Aguardando a medição...</p>
+    </div>
+
+    <div id="internalActivities" style="display:none;">
+      <label for="activitySelect">Escolha uma atividade interna:</label>
+      <select id="activitySelect">
+        <option value="tableGames">Jogos de Tabuleiro</option>
+        <option value="pingPong">Tênis de Mesa / Pebolim</option>
+        <option value="computerLab">Atividade no Laboratório de Informática</option>
+        <option value="blackboardGames">Jogos no Quadro</option>
+        <option value="other">Sugerir Outro</option>
+      </select>
+    </div>
+
+    <!-- Legenda dos índices de qualidade do ar -->
+    <div id="airQualityLegend">
+      <h3>Índice de Qualidade do Ar (AQI)</h3>
+      <ul>
+        <li><strong>1 - 50 (Boa)</strong>: A qualidade do ar é considerada boa. Pode-se realizar atividades ao ar livre sem preocupações.</li>
+        <li><strong>51 - 100 (Moderada)</strong>: A qualidade do ar é moderada. Pode haver risco para pessoas com condições respiratórias preexistentes.</li>
+        <li><strong>101 - 150 (Não saudável para grupos sensíveis)</strong>: Pessoas com problemas respiratórios ou cardíacos podem ser afetadas. Crianças e idosos devem evitar atividades externas.</li>
+        <li><strong>151 - 200 (Não saudável)</strong>: A qualidade do ar é prejudicial à saúde de todos. Deve-se evitar atividades físicas ao ar livre.</li>
+        <li><strong>201 - 300 (Muito Não saudável)</strong>: A qualidade do ar é extremamente prejudicial à saúde. Todos devem evitar atividades ao ar livre.</li>
+        <li><strong>301 - 500 (Perigoso)</strong>: A qualidade do ar é muito perigosa. Todos devem permanecer dentro de casa e evitar qualquer atividade física externa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
